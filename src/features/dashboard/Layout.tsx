@@ -9,7 +9,7 @@ const Layout = () => {
         <SiteHeader />
         <div className="flex flex-1 flex-col">
          {/* Components here */}
-        </div>
+            </div>
       </SidebarInset>
     </SidebarProvider>
   );
