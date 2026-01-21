@@ -71,13 +71,17 @@ const FormExample = () => {
     console.log(values);
     toast.success("Formulario enviado correctamente");
   }
+  const handleStepChange = (value: string) => {
+    setStep(value as Step);
+  };
+
   return (
     <FormWrapper
       form={form}
       onSubmit={onSubmit}
       className="w-full flex justify-center align-middle items-center"
     >
-      <Tabs value={step} onValueChange={setStep} className="lg:w-2/3">
+      <Tabs value={step} onValueChange={handleStepChange} className="lg:w-2/3">
         <TabsList className="flex flex-col gap-4 w-full">
           <HeaderTabs validSteps={validStep} />
         </TabsList>
